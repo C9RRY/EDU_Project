@@ -49,7 +49,7 @@ def get_car_list(csv_filename):
     with open(f'{csv_filename}', encoding='utf-8') as csv_fd:
         cars = []
         reader = csv.reader(csv_fd, delimiter=';')
-        next(reader)  # пропускаем заголовок
+        next(reader) 
         for row in reader:
             try:
                 if row[0] == 'car':

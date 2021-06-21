@@ -29,6 +29,6 @@ def get_car_list(csv_filename):
         for row in reader:
             car_list.append(row)
     return car_list
-sefsfe
+
 
 

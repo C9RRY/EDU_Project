@@ -3,7 +3,7 @@ import os
 
 
 class CarBase:
-    def __init__(self, brand=1, photo_file_name=1, carrying=1):
+    def __init__(self, brand=1, photo_file_name="", carrying=1):
         self.brand = brand
         self.photo_file_name = photo_file_name
         self.carrying = carrying

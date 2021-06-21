@@ -30,5 +30,5 @@ def get_car_list(csv_filename):
             car_list.append(row)
     return car_list
 
-print(get_car_list('coursera_week3_cars'))
+
 

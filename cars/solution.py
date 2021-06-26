@@ -23,6 +23,7 @@ class Truck(CarBase):
     def __init__(self, brand, photo_file_name, carrying, body_whl):
         super().__init__(brand, photo_file_name, carrying)
         self.car_type = 'truck'
+        # why do use 3??? what does it mean???
         if len(body_whl.split('x')) != 3:
             body_whl = 0
         self.body_whl = body_whl

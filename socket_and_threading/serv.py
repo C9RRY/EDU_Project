@@ -1,4 +1,5 @@
 import socket
+import time
 
 with socket.socket() as serv_sock:
     serv_sock.bind(("0.0.0.0", 10002))
@@ -15,7 +16,8 @@ with socket.socket() as serv_sock:
                 if data.decode("utf8") == "!":
                     break
                 conn.send(data.upper())
-                conn.send("accepted".encode("utf8"))
+                conn.send("accepted ".encode("utf8"))
+                conn.send(f"{time.time()}".encode("utf8"))
                 print(data.decode("utf8"))
                 print("1")
             print("2")

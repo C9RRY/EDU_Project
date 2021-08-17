@@ -1,6 +1,11 @@
-class Value:
+import time
+import os
 
-    def __init__(self):
+pid = os.getpid()
+
+while True:
+    print(pid, time.time())
+    time.sleep(2)
         self.value = None
 
     def __get__(self, instance, owner):

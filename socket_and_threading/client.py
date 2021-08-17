@@ -1,6 +1,6 @@
 import socket
 
-with socket.create_connection(("192.168.88.253", 10002)) as sock:
+with socket.create_connection(("192.168.1.202", 10002)) as sock:
     sock.sendall("ping".encode("utf8"))
     while True:
         data = sock.recv(1024)

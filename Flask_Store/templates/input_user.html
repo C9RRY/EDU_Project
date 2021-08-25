@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <form method="post">
+      <input type="text" class="form-control" name="user" id="user" placeholder="Логін">{{data}}<br>
+      <input type="text" class="form-control" name="password" id="password" placeholder="Пароль"><br>
+      <button class="btn btn-success" type="submit">Увійти</button>
+    </form>
+</div>
+{% endblock %}

@@ -5,7 +5,7 @@ import os.path
 class CarBase():
     """базовый класс для транспортных средств"""
 
-    # атрибут для хранения обязательных параметров класса, описывающего транспортное средство
+    # attribute to save required params of the class
     required = []
 
     def __init__(self, brand, photo_file_name, carrying):

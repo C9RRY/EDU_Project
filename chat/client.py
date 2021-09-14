@@ -7,6 +7,7 @@ key = 8194
 shutdown = False
 join = False
 
+
 def receving (name, sock):
     while not shutdown:
         try:
@@ -14,7 +15,7 @@ def receving (name, sock):
                 data, addr = sock.recvfrom(1024)
                 decrypt = ""; k = False
                 for i in data.decode("utf-8"):
-                    if i is ":":
+                    if i == ":":
                         k = True
                         decrypt += i
                     elif k == False or i == " ":
@@ -22,10 +23,11 @@ def receving (name, sock):
                     else:
                         decrypt += chr(ord(i)^key)
                 print(decrypt)
-
                 time.sleep(0.2)
         except:
             pass
+
+
 host = socket.gethostbyname(socket.gethostname())
 port = 0
 
@@ -53,7 +55,6 @@ while shutdown is False:
 
             if message != "":
                 s.sendto(("[" + alias + "] :: " + message).encode("utf-8"), server)
-
             time.sleep(0.2)
         except:
             s.sendto(("[" + alias + "] <= left chat ").encode("utf-8"), server)

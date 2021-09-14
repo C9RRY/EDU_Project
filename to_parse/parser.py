@@ -34,7 +34,7 @@ def get_content(html):
         else:
             uah_price = "[ None ]"
         usd_price = item.find('span', class_='green').get_text(strip=True)
-        if usd_price is not '':
+        if usd_price != '':
             usd_price = item.find('span', class_='green').get_text(strip=True)
         else:
             usd_price = "[ None ]"
@@ -57,7 +57,7 @@ def save_file(items, path):
 
 
 def parse():
-    my_url = input('Paste URL: ')
+    my_url = 'https://auto.ria.com/uk/newauto/search/?page=2&markaId=48&categoryId=1'
     my_url = my_url.strip()
     html = get_html(my_url)
     if html.status_code == 200:
